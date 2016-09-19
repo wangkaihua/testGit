@@ -1,0 +1,387 @@
+<style>
+  .goods .float-25 {
+    float: left;
+    width: 25%;
+  }
+
+  .goods .float-30 {
+    float: left;
+    width: 30%;
+  }
+
+  .goods .float-35 {
+    float: left;
+    width: 35%;
+  }
+
+  .goods .float-40 {
+    float: left;
+    width: 40%;
+  }
+
+  .goods .linkRemart {
+    height: 4em;
+    width: 100%;
+    border: none;
+    line-height: 1.6em;
+    background-color: #f0f0f0;
+    padding: 5px;
+  }
+
+  .goods .listBg {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    margin: 5px;
+  }
+
+  .goods .remarks {
+    height: 2em;
+    width: 96%;
+    border: none;
+    line-height: 1.6em;
+    background-color: #e5e5e5;
+    border-radius: 5px;
+    padding-left: 5px
+  }
+
+  .goods .list-detail {
+    font-size: 0.8em;
+    color: #6b6b6b
+  }
+
+  .goods .chooseGoods {
+    float: left;
+    font-size: 1em;
+    width: 20%;
+    text-align: left;
+    color: #925CB0
+  }
+
+  .goods .line {
+    float: left;
+    font-size: 1em;
+    width: 5%;
+    text-align: center;
+    color: #ddd
+  }
+
+  .goods .aditButton {
+    float: left;
+    font-size: 1em;
+    width: 25%;
+    text-align: right;
+    color: #925CB0
+  }
+
+  .goods .finishButton {
+    float: left;
+    font-size: 1em;
+    width: 25%;
+    text-align: right;
+    color: #925CB0
+  }
+
+  .goods .submit {
+    background-color: #31acce;
+    text-align: center;
+    color: #fff;
+    width: 80%;
+    margin-left: 10%;
+    font-size: 1.5em;
+    padding: 10px 0 10px 0;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+
+  .goods .deleteList {
+    background-color: #fa9ab4;
+    text-align: center;
+    color: #fff;
+    width: 80%;
+    margin-left: 10%;
+    font-size: 1.5em;
+    padding: 10px 0 10px 0;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+
+  .goods .buttonStyle {
+    background-color: #31acce;
+    width: 45px;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    float: left;
+    margin-right: 10px;
+  }
+
+  .goods ion-option-button {
+    background-color: #31acce;
+    opacity: 0.7;
+    color: white;
+    margin-right: 10px;
+  }
+
+  .clear {
+    clear: both;
+  }
+
+  .goods .message {
+    padding: 10px;
+    /*margin-bottom: 10px;*/
+    border-bottom: 1px solid #ddd;
+  }
+
+  .goods .content {
+    padding: 10px;
+    /*margin-bottom: 10px;*/
+  }
+
+  .goods .inputStyle {
+    background-color: #f0f0f0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 1.2em;
+    text-align: right;
+    padding-right: 5px;
+    color: #5f5f5f;
+    border-radius: 2px;
+    width: 96%;
+    height: 25px;
+    /* margin-bottom: -3.5px; */
+    margin-top: -2.5px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 25px;
+  }
+
+  .goods .addressInput {
+    background-color: #f0f0f0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 1.2em;
+    border-radius: 2px;
+    color: #5f5f5f;
+    padding-right: 5px;
+    width: 96%;
+    height: 25px;
+    /* margin-bottom: -3.5px; */
+    margin-top: -2.5px;
+    text-align: right;
+    line-height: 25px;
+
+  }
+
+  .goods .elseAddress {
+    background-color: #fa9ab4;
+    border-radius: 5px;
+    width: 77px;
+    margin-left: 5px;
+    color: #fff;
+    line-height: 20px;
+    height: 20px;
+  }
+
+  .goods .message-list {
+    height: 35px;
+    padding: 10px 0 10px 0;
+  }
+
+  .goods .content-list {
+    padding: 5px 0 5px 0;
+  }
+
+  .goods ion-list ion-item {
+    padding: 0;
+    border: none;
+    margin: 0;
+  }
+
+  .customerModal {
+    position: absolute;
+    top: 25%;
+    right: 15%;
+    bottom: 25%;
+    left: 15%;
+    min-height: 240px;
+    width: 70%;
+    background-color: white;
+    border: solid 1px silver;
+    border-radius: 6px;
+  }
+
+  .customerModal .backColor {
+    background-color: #fff;
+    border-bottom: solid 1px #fff;
+  }
+
+  .customerModal .bgColor {
+    background-color: #f5f5f5;
+  }
+
+  .customerModal .list {
+    border: none;
+  }
+
+  .customerModal .list a {
+    border-left: none;
+    border-right: none;
+    border-top: dotted 1px #009689;
+  }
+
+</style>
+<ion-view view-title="订购产品" class="goods">
+  <ion-nav-bar class="bar-title">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+  </ion-nav-bar>
+  <ion-content>
+    <div class="message">
+      <div class="message-list">
+        <div class="float-25" style="">需求日期：</div>
+        <div style="float: left;width: 37%" ng-click="chooseDate()">
+          <div class="inputStyle"><i class="icon ion-calendar"></i></div>
+        </div>
+        <div style="float: left;width: 28%; margin-left: 6px;">是 否 自 提：
+        </div>
+        <div style="float: left;width: 7%;" ng-click="chooseMetho()"><img src="{{imgSelfChoose}}" style="height: 20px"></div>
+      </div>
+      <div class="message-list">
+        <div class="float-25">选择合同：</div>
+        <div style="float: left;width: 37%" ng-click="openModal()">
+          <div class="inputStyle">
+            {{orderData.contractor_number}}
+            <i class="icon ion-arrow-down-b"></i>
+          </div>
+        </div>
+        <div style="float: left;width: 28%; margin-left: 6px;">发货等通知：</div>
+        <div style="float: left;width: 7%;" ng-click="chooseWait()"><img src="{{imgWaitChoose}}" style="height: 20px"></div>
+      </div>
+      <div class="message-list">
+        <div style="float: left;width: 33%;">单一收货地址：</div>
+        <div class="float-40">
+          <div class="addressInput">
+            <i class="icon ion-arrow-down-b"></i>
+          </div>
+        </div>
+        <div style="float: left;width: 27%;text-align: center" ng-click="goTackGoods()">
+          <div class="elseAddress">其他地址</div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="content">
+      <div class="content-list">
+        <div style="float: left;width: 19%;">收货人：</div>
+        <div class="float-30">
+          <div
+            style="background-color: #e8e8e8;height: 25px;margin-top:-2.5px;width:85px;border-radius: 2px;"></div>
+        </div>
+        <div style="float: left;width: 24%;">联系电话：</div>
+        <div class="float-25">
+          <div
+            style="background-color: #e8e8e8;height: 25px;margin-top:-2.5px;width: 95px;border-radius: 2px;"></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="content-list">
+        <!--<textarea style="background-color: #e8e8e8;width: 100%;height: 50px;color: #000;" placeholder="备注">-->
+         <textarea ng-blur="blur()" ng-model="$parent.comments" class="linkRemart" placeholder="备注">
+        </textarea>
+      </div>
+      <div class="content-list">
+        <div style="float: left;font-size: 1.3em;width: 50%;text-align:left">商品信息</div>
+        <div ng-if="adit" class="finishButton" ng-click="goFinishList()">完成</div>
+        <div ng-hide="adit" class="aditButton" ng-click="goAditList()">编辑
+        </div>
+        <div class="line">|</div>
+        <div class="chooseGoods">选择产品</div>
+        <div class="clear"></div>
+      </div>
+      <div ng-hide="adit">
+        <div class="listBg" ng-repeat="item in good">
+          <div class="row">{{item.item_desc}} 合同余量 {{item.contractor_qty}}</div>
+          <div class="row list-detail" style="">克重 {{item.item_spec}} 等级 {{item.item_level}} 幅宽 {{item.item_width}} 长度
+            {{item.item_length}} 单位{{item.item_uom}}
+          </div>
+          <div class="row" style="color: #6b6b6b">
+            备注：{{item.comment}}
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <ion-list ng-if="adit">
+      <ion-item>
+        <div class="row row-center listBg" ng-repeat="item in good">
+          <div class="col col-10" ng-click="choose()">
+            <img src="{{imgChoose}}" style="width: 22px">
+          </div>
+          <div class="col col-70">
+            <div class="row" style="font-size: 0.9em">{{item.item_desc}} 合同余量 {{item.contractor_qty}}</div>
+            <div class="row list-detail">克重 {{item.item_spec}} 等级 {{item.item_level}} 幅宽 {{item.item_width}} 长度
+              {{item.item_length}} 单位{{item.item_uom}}
+            </div>
+            <div class="row">
+              <textarea ng-blur="blur()" ng-model="$parent.comments" class="remarks" placeholder="备注">
+               </textarea>
+            </div>
+          </div>
+          <div class="col col-20">test</div>
+        </div>
+
+        <ion-option-button>删除</ion-option-button>
+      </ion-item>
+      <div style="margin-top: 10px">
+        <div class="buttonStyle">全选</div>
+        <div class="buttonStyle">取消</div>
+        <div class="clear"></div>
+      </div>
+    </ion-list>
+    </div>
+    <div>
+      <div class="deleteList" ng-if="adit">
+        删除
+      </div>
+      <div class="submit" ng-hide="adit" ng-click="submitOrder()">
+        提交订单
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
+
+<script id="my-modal.html" type="text/ng-template">
+  <ion-modal-view class="customerModal">
+    <ion-header-bar class="backColor">
+      <h1 class="title" style="color: #009689;border-bottom: none;">请选择合同</h1>
+    </ion-header-bar>
+    <ion-content class="">
+      <div class="list">
+        <a class="item" ng-repeat="x in contract" ng-click="selectContact(x)">
+          <span>合同号</span>
+          <span style="color: #777777;margin-left: 10px">{{x.contractor_number}}</span>
+        </a>
+      </div>
+    </ion-content>
+  </ion-modal-view>
+</script>
+<script id="tackGoods.html" type="text/ng-template">
+  <ion-modal-view class="customerModal">
+    <ion-header-bar class="backColor">
+      <h1 class="title" style="color: #009689;border-bottom: none;">请选择收货地址</h1>
+    </ion-header-bar>
+    <ion-content class="">
+      <div class="list">
+        <a class="item" ng-repeat="x in contract" ng-click="selectContact(x)">
+          <span>合同号</span>
+          <span style="color: #777777;margin-left: 10px">{{x.contractor_number}}</span>
+        </a>
+      </div>
+    </ion-content>
+  </ion-modal-view>
+</script>

@@ -1,0 +1,92 @@
+<!--
+Create tabs with an icon and label, using the tabs-positive style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+<style>
+  .main-homeOn{
+    background: url("img/tab/tab1-on.png") no-repeat center top;
+    background-size: 24px;
+    position: relative;
+    top: 0.15em;
+  }
+  .main-homeOff{
+    background: url("img/tab/tab1-on.png") no-repeat center top;
+    background-size: 24px;
+    position: relative;
+    top: 0.15em;
+  }
+  .main-orderproductOn{
+    background: url("img/tab/tab2-on.png") no-repeat center top;
+    background-size: 24px;
+    position: relative;
+    top: 0.15em;
+  }
+  .main-orderproductOff{
+    background: url("img/tab/tab2-off.png") no-repeat center top;
+    background-size: 24px;
+    position: relative;
+    top: 0.15em;
+  }
+  .main-myoderOn{
+    background: url("img/tab/tab3-on.png") no-repeat center top;
+    background-size: 24px;
+    position: relative;
+    top: 0.15em;
+  }
+  .main-myoderOff{
+    background: url("img/tab/tab3-off.png") no-repeat center top;
+    background-size: 24px;
+    position: relative;
+    top: 0.15em;
+  }
+  .main-announcementOn{
+    background: url("img/tab/tab4-on.png") no-repeat center top;
+    background-size: 24px;
+    position: relative;
+    top: 0.15em;
+  }
+  .main-announcementOff{
+    background: url("img/tab/tab4-off.png") no-repeat center top;
+    background-size: 24px;
+    position: relative;
+    top: 0.15em;
+  }
+  .main-feedbackOn{
+    background: url("img/tab/tab5-on.png") no-repeat center top;
+    background-size: 24px;
+    position: relative;
+    top: 0.15em;
+  }
+  .main-feedbackOff{
+    background: url("img/tab/tab5-off.png") no-repeat center top;
+    background-size: 24px;
+    position: relative;
+    top: 0.15em;
+  }
+</style>
+<ion-tabs class="tabs-icon-top tabs-color-active-positive">
+
+  <!-- Dashboard Tab -->
+  <ion-tab title="主页" icon-off="main-homeOff" icon-on="main-homeOn" href="#/tab/main">
+    <ion-nav-view name="tab-main"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Chats Tab -->
+  <ion-tab title="订购商品" icon-off="main-orderproductOff" icon-on="main-orderproductOn" href="#/tab/goods">
+    <ion-nav-view name="tab-goods"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Account Tab -->
+  <ion-tab title="我的订单" icon-off="main-myoderOff" icon-on="main-myoderOn" href="#/tab/order">
+    <ion-nav-view name="tab-order"></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab title="公告通知" icon-off="main-announcementOff" icon-on="main-announcementOn" href="#/tab/account">
+    <ion-nav-view name="tab-account"></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab title="投诉反馈" icon-off="main-feedbackOff" icon-on="main-feedbackOn" href="#/tab/account">
+    <ion-nav-view name="tab-account"></ion-nav-view>
+  </ion-tab>
+</ion-tabs>

@@ -1,0 +1,24 @@
+<style>
+  .logined-button {
+    background-color:#fff;
+    color: purple;
+    border-radius: 15px;
+    width: 66.7%;
+    height: 41px;
+    border: none;
+    margin-top: 10%;
+  }
+</style>
+<ion-modal-view class="start">
+  <ion-header-bar>
+    <h1 class="title">限时考试结束</h1>
+  </ion-header-bar>
+  <ion-content style="width: 100%;" align="center">
+    <div style="margin-top: 30%;font-size: 20px;color:red">考试结束</div>
+    <button class="logined-button" ng-click="closecloseModal()">查看错题</button>
+    <button class="logined-button" ng-click="saveWrong()">保存到错题本</button>
+  </ion-content>
+</ion-modal-view>
+<div class="hideM">
+
+</div>

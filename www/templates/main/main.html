@@ -1,0 +1,146 @@
+<style>
+  .mainHome{
+
+  }
+  .mainHome .row{
+    padding:0;
+
+  }
+  .mainHome .item-image-1{
+    width: 100%;
+    margin: 0 5% 0 15%
+  }
+  .mainHome .item-image-2{
+    width: 100%;
+    margin: 0 10% 0 10%
+  }
+  .mainHome .item-image-3{
+    width: 100%;
+    margin: 0 10% 0 10%
+  }
+  .mainHome .item-image-4{
+    width: 100%;
+    margin: 0 10% 0 10%
+  }
+  .mainHome .item-image-5{
+    width: 100%;
+    margin: 0 10% 0 10%
+  }
+  .mainHome .item-title1{
+    padding: 10px 0 10px 14px;
+    font-size:10px;
+    font-family: 微软雅黑;
+  }
+  .mainHome .item-title2{
+    padding: 10px 0 10px 14px;
+    font-size:10px;
+    font-family: 微软雅黑;
+  }
+  .mainHome .item-title3{
+    padding: 10px 0 10px 14px;
+    font-size:10px;
+    font-family: 微软雅黑;
+  }
+  .mainHome .item-title4{
+    padding: 10px 0 10px 14px;
+    font-size:10px;
+    font-family: 微软雅黑;
+  }
+  .mainHome .item-title5{
+    padding: 10px 0 10px 14px;
+    font-size:10px;
+    font-family: 微软雅黑;
+  }
+
+  .mainHome .user-message{
+    background-color: pink;
+    height:30px
+  }
+  .mainHome .user_message{
+    width:20px;
+    height:20px;
+    margin: 1.2% 0 0 5%;
+  }
+  .mainHome .circle{
+    background-color:#F5F5F5;
+    height: 20px;
+  }
+  .mainHome .circle1{
+    width: 10px;
+    margin-left: 42%;
+  }
+  .mainHome .circle2{
+    width: 10px;
+    margin-left: 3%;
+  }
+  .mainHome .circle3{
+    width: 10px;
+    margin-left: 3%;
+  }
+  .mainHome .user-message-circle{
+    margin: 2% 0 0 30%;
+    width: 10px;
+  }
+</style>
+<ion-nav-view view-title="主页">
+
+  <ion-content overflow-scroll="false" has-bouncing="false" style="height: 100%;" class="mainHome">
+    <ion-slide-box on-slide-changed="slideHasChanged($index)"  ng-style="picHeight"  delegate-handle="slideimgs"  auto-play="true" show-pager="false" does-continue="true">
+      <ion-slide ng-repeat="image in allImages">
+        <img ng-src="{{image}}" style="width: 100%;" ng-style="picHeight" />
+      </ion-slide>
+    </ion-slide-box>
+    <div class="circle">
+      <img src="img/main/circle-on.png"  ng-if="circleNum===0" class="circle1">
+      <img src="img/main/circle-off.png" ng-if="circleNum!==0" class="circle1">
+      <img src="img/main/circle-on.png"  ng-if="circleNum===1" class="circle2">
+      <img src="img/main/circle-off.png" ng-if="circleNum!==1" class="circle2">
+      <img src="img/main/circle-on.png" ng-if="circleNum===2" class="circle3">
+      <img src="img/main/circle-off.png" ng-if="circleNum!==2" class="circle3">
+    </div>
+    <div class="row">
+      <div class="col">
+        <img class="item-image-1" src="img/main/order_product.png">
+        <div class="item-title1">订购产品</div>
+      </div>
+      <div class="col">
+        <img class="item-image-2" src="img/main/myorder.png">
+        <div class="item-title2">我的订单</div>
+      </div>
+      <div class="col">
+        <img class="item-image-3" src="img/main/announcement.png">
+        <div class="item-title3">公告通知</div>
+      </div>
+      <div class="col">
+        <img class="item-image-4" src="img/main/feedback.png">
+        <div class="item-title4">投诉反馈</div>
+      </div>
+      <div class="col">
+        <img class="item-image-5" src="img/main/product_information.png">
+        <div class="item-title5">产品信息</div>
+      </div>
+    </div>
+    <div style="height: 1px;background: #DDDDDD; width: 100%; margin-left: 10px"></div>
+    <div class="row" style="height: 40px;margin-top: -10px;">
+      <div class="col col-15">
+        <img src="img/main/call.png" style="width: 25px;margin: 25% 0 0 50%;">
+      </div>
+      <div class="col col-50" style="font-size:12px;margin:3% 0 0 2%;">
+        <a href="tel:10086">客服热线(全国)400-0000-888</a>
+      </div>
+      <div class="col col-15">
+        <img src="img/main/kh.png" style="width: 25px;margin: 25% 0 0 10%;">
+      </div>
+      <div class="col col-30" style="font-size:12px;margin:3% 2% 0 2%;">KH12989999</div>
+    </div>
+    <div style="height: 15px;background: #F5F5F5; width: 100%;"></div>
+    <div class="user-message">
+      <img src="img/main/user_message.png" class="user_message">
+      <div style="font-size:12px;float: right;margin:1.2% 70% 0 0;color:white;" >用户消息</div>
+    </div>
+    <div class="row" ng-repeat="item in message">
+      <div class="col col-10"><img src="img/main/circle-on.png" class="user-message-circle"></div>
+      <div class="col col-90" style="margin-left: -10px;">{{item.message_time}}订单{{item.order_num}}{{item.order_status}}</div>
+    </div>
+  </ion-content>
+</ion-nav-view>
